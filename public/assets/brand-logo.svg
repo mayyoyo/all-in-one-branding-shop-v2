@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-labelledby="title desc">
+<title id="title">AIO — All-in-One Branding Shop — ሁሉንም በአንድ የያዘ ሱቅ</title>
+<desc id="desc">Elegant forest-green and gold AIO monogram with the business name and Amharic tagline.</desc>
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E8D18B"/><stop offset=".55" stop-color="#C5A45A"/><stop offset="1" stop-color="#9F7734"/></linearGradient></defs>
+<path d="M55 112 C92 23 230 14 329 60 C380 83 414 84 462 57" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+<path d="M368 44 C402 17 442 24 466 52" fill="none" stroke="#C5A45A" stroke-width="3" stroke-linecap="round"/>
+<text x="260" y="151" text-anchor="middle" fill="#174D36" font-family="Georgia,'Times New Roman',serif" font-size="126" font-weight="700" letter-spacing="-8">AIO</text>
+<path d="M108 171 Q260 183 412 171" fill="none" stroke="url(#gold)" stroke-width="5"/>
+<text x="260" y="215" text-anchor="middle" fill="#174D36" font-family="Georgia,'Times New Roman',serif" font-size="35" font-weight="700" letter-spacing="1.5">ALL-IN-ONE</text>
+<text x="260" y="250" text-anchor="middle" fill="#174D36" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="800" letter-spacing="3">BRANDING SHOP</text>
+<path d="M112 265 H408" stroke="#C5A45A" stroke-width="2"/>
+<text x="260" y="290" text-anchor="middle" fill="#8D6C2D" font-family="'Noto Sans Ethiopic','Nyala','Abyssinica SIL',sans-serif" font-size="19" font-weight="700">ሁሉንም በአንድ የያዘ ሱቅ</text>
+</svg>

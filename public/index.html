@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="All-in-One Branding Shop — custom business cards, product labels, stickers, packaging and digital branding. Design • Print • Brand.">
+<meta name="theme-color" content="#174D36">
+<link rel="canonical" href="https://allinonebrandingshop.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/brand-mark.svg">
+<link rel="preload" href="/assets/brand-logo.svg" as="image" type="image/svg+xml">
+<title>All-in-One Branding Shop | Print & Digital</title>
+<style>
+:root {
+  --site-primary: #174D36;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #C5A45A;
+  --site-on-secondary: #17251D;
+  --site-background: #F7F5EF;
+  --site-on-background: #18251F;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Georgia, "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --ink: #18251F;
+  --muted: #68756D;
+  --paper: #FFFEFA;
+  --line: #E4E4DA;
+  --green-2: #1E573D;
+  --gold: #C5A45A;
+  --soft-green: #EAF0E8;
+  --shadow: 0 18px 55px rgba(18,61,43,.12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body { margin: 0; color: var(--site-on-background); background: light-dark(var(--site-background), #121914); font-family: var(--site-font-body); line-height: 1.55; }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; overflow: clip; }
+.container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+.announcement { background: var(--site-primary); color: #F9F5E9; text-align: center; padding: 8px 16px; font-size: .78rem; letter-spacing: .08em; }
+.announcement strong { color: #E6C987; }
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,254,250,.94); border-bottom: 1px solid rgba(18,61,43,.1); backdrop-filter: blur(14px); }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 116px; gap: 24px; }
+.brand { display: inline-flex; align-items: center; min-width: 0; flex: 0 0 auto; }
+.brand-full-logo { display:block; width:112px; height:112px; object-fit:contain; }
+.brand-mark { width: 48px; height: 48px; display: block; flex: 0 0 auto; object-fit: contain; filter: drop-shadow(0 5px 10px rgba(18,61,43,.12)); }
+.brand-name { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-name strong { font-size: .98rem; letter-spacing: -.025em; color: var(--site-primary); }
+.brand-name span { font-size: .65rem; color: #788278; letter-spacing: .15em; text-transform: uppercase; margin-top: 4px; }
+.desktop-nav { display: flex; align-items: center; gap: clamp(15px, 2vw, 27px); }
+.desktop-nav a { font-size: .88rem; color: #3E4C43; transition: color .2s; }
+.desktop-nav a:hover { color: #A47B32; }
+.nav-cta, .btn { border: 0; border-radius: 999px; padding: 13px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; font-weight: 700; font-size: .9rem; transition: transform .2s, box-shadow .2s, background .2s; }
+.nav-cta, .btn-primary { background: var(--site-primary); color: white; box-shadow: 0 8px 20px rgba(18,61,43,.16); }
+.nav-cta:hover, .btn-primary:hover { background: #20583F; transform: translateY(-2px); box-shadow: 0 12px 26px rgba(18,61,43,.2); }
+.btn-gold { background: var(--site-secondary); color: var(--site-on-secondary); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,164,92,.25); }
+.btn-outline { border: 1px solid rgba(255,255,255,.55); color: white; background: transparent; }
+.btn-outline:hover { background: rgba(255,255,255,.1); }
+.menu-toggle { display: none; width: 46px; height: 46px; border: 1px solid var(--line); background: white; color: var(--site-primary); border-radius: 50%; align-items: center; justify-content: center; }
+.menu-toggle svg { width: 22px; height: 22px; }
+.mobile-nav { display: none; padding: 8px 24px 20px; border-top: 1px solid var(--line); background: var(--paper); }
+.mobile-nav a { display: block; padding: 13px 5px; border-bottom: 1px solid #ECECE5; color: var(--ink); font-weight: 600; }
+.mobile-nav .btn { width: 100%; margin-top: 15px; }
+.mobile-nav.open { display: block; }
+.hero { position: relative; color: white; background: var(--site-primary); min-height: 590px; display: grid; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 55px; align-items: center; padding-block: 75px 82px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #9A7737; text-transform: uppercase; font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+.hero .eyebrow { color: #E6C987; }
+.eyebrow::before { content: ""; width: 25px; height: 1px; background: currentColor; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, .serif { font-family: var(--site-font-heading); font-weight: 500; letter-spacing: -.04em; }
+h1 { font-size: clamp(2.8rem, 5.1vw, 4.9rem); line-height: 1.03; margin: 22px 0; max-width: 650px; }
+h1 em { color: #E6C987; font-style: italic; }
+.hero-copy { color: #D9E3DB; max-width: 515px; font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-trust { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 34px; color: #E4E9E2; font-size: .8rem; }
+.hero-trust span { display: flex; align-items: center; gap: 7px; }
+.hero-trust b { color: #E6C987; }
+.hero-art { min-height: 410px; position: relative; display: grid; place-items: center; }
+.hero-photo { width: 100%; height: 410px; object-fit: cover; border-radius: 46% 46% 18px 18px; border: 7px solid rgba(255,255,255,.1); box-shadow: 0 28px 70px rgba(0,0,0,.24); }
+.floating-card { position: absolute; background: #FFFEFA; color: var(--ink); border-radius: 15px; padding: 15px 17px; box-shadow: var(--shadow); }
+.floating-card.one { left: -24px; bottom: 30px; width: 190px; }
+.floating-card.two { right: -15px; top: 36px; width: 175px; }
+.floating-card small { display: block; color: var(--muted); font-size: .7rem; }
+.floating-card strong { display: block; font-size: 1rem; margin-top: 3px; }
+.floating-icon { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--soft-green); color: var(--site-primary); margin-bottom: 8px; }
+.trust-strip { background: #E9EDE5; padding: 19px 0; }
+.trust-items { display: flex; justify-content: space-between; align-items: center; gap: 22px; color: #44554A; font-size: .84rem; font-weight: 650; }
+.trust-items span { display: flex; align-items: center; gap: 8px; }
+.trust-items svg { color: #8B6A2E; width: 18px; }
+.section { padding: 92px 0; }
+.section-head { max-width: 700px; margin-bottom: 38px; }
+.section-head.center { text-align: center; margin-inline: auto; }
+.section-head.center .eyebrow { justify-content: center; }
+h2 { font-size: clamp(2.2rem, 4vw, 3.35rem); line-height: 1.1; margin: 14px 0; }
+.section-head p { color: var(--muted); max-width: 620px; margin-bottom: 0; }
+.section-head.center p { margin-inline: auto; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.service-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: transform .22s, box-shadow .22s; }
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.service-card img { width: 100%; height: 210px; object-fit: cover; display: block; }
+.service-body { padding: 23px; }
+.service-tag { color: #8C6B2F; font-size: .69rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.service-body h3 { font-size: 1.25rem; margin: 8px 0; }
+.service-body p { color: var(--muted); font-size: .91rem; min-height: 55px; }
+.service-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 15px; border-top: 1px solid var(--line); }
+.service-foot strong { font-size: .9rem; color: var(--site-primary); }
+.text-link { color: #765923; font-weight: 800; font-size: .84rem; }
+.text-link:hover { text-decoration: underline; }
+.process { background: #F0F0E8; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.process-step { padding: 24px 20px 10px 0; }
+
+.supplies-section { background: #F6F7F1; }
+.supplies-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 12px 35px rgba(24,37,31,.04); }
+.supplies-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.supplies-table th, .supplies-table td { padding: 17px 20px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.supplies-table thead th { background: #EAF0E7; color: var(--site-primary); font-size: .85rem; }
+.supplies-table tbody th { width: 29%; color: var(--ink); font-size: .92rem; }
+.supplies-table td { color: var(--muted); font-size: .9rem; line-height: 1.65; }
+.supplies-table tr:last-child th, .supplies-table tr:last-child td { border-bottom: 0; }
+
+.step-no { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid #C7B27F; color: #7E6129; border-radius: 50%; font-family: var(--site-font-heading); font-size: 1.15rem; margin-bottom: 20px; }
+.process-step h3 { font-size: 1.12rem; margin-bottom: 8px; }
+.process-step p { color: var(--muted); font-size: .91rem; }
+.pricing-section { background: #FFFEFA; }
+.quote-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 44px; align-items: start; }
+.quote-aside { background: var(--site-primary); color: white; border-radius: 24px; padding: 32px; position: sticky; top: 105px; overflow: hidden; }
+.quote-aside::after { content: ""; position: absolute; width: 220px; height: 220px; border: 1px solid rgba(230,201,135,.25); border-radius: 50%; right: -95px; bottom: -105px; box-shadow: 0 0 0 22px rgba(230,201,135,.04), 0 0 0 44px rgba(230,201,135,.03); opacity: var(--site-decoration-opacity); pointer-events: none; }
+.quote-aside .eyebrow { color: #E6C987; }
+.quote-aside h2 { font-size: 2.5rem; }
+.quote-aside p { color: #D7E2D9; }
+.quote-benefit { display: flex; gap: 12px; margin-top: 20px; font-size: .88rem; color: #F0F2ED; }
+.check { color: #E6C987; font-weight: 900; }
+.quote-card { border: 1px solid var(--line); border-radius: 22px; padding: 30px; background: white; box-shadow: 0 12px 40px rgba(24,37,31,.05); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+[hidden] { display: none !important; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: .8rem; font-weight: 750; color: #34443A; }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; border: 1px solid #DADFD6; background: #FBFCF9; color: var(--ink); padding: 12px 13px; border-radius: 10px; outline: none; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #6E947B; box-shadow: 0 0 0 3px rgba(30,87,61,.1); }
+.field textarea { min-height: 90px; resize: vertical; }
+.estimate { background: #F0F4ED; border: 1px solid #DCE7D9; border-radius: 16px; padding: 20px; margin-top: 22px; }
+.estimate-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.estimate-label { font-size: .77rem; color: var(--muted); font-weight: 700; }
+.estimate-price { color: var(--site-primary); font-family: var(--site-font-heading); font-size: 2.2rem; line-height: 1.1; }
+.estimate-detail { font-size: .82rem; color: var(--muted); margin-top: 8px; }
+.estimate-lines { display: grid; gap: 7px; border-top: 1px solid #D7E1D4; margin-top: 15px; padding-top: 13px; font-size: .82rem; }
+.estimate-line { display: flex; justify-content: space-between; gap: 12px; }
+.disclaimer { font-size: .73rem; color: #717B72; margin: 13px 0 0; }
+.quote-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.quote-actions .btn { flex: 1; }
+.works-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.work-tile { min-height: 285px; border-radius: 22px; overflow: hidden; position: relative; background: #1B3929; color: white; display: flex; align-items: end; padding: 27px; }
+.work-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .72; transition: transform .5s; }
+.work-tile:hover img { transform: scale(1.04); }
+.work-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,25,16,.9), rgba(8,25,16,.04) 85%); }
+.work-content { position: relative; z-index: 1; }
+.work-content span { color: #E6C987; font-size: .7rem; text-transform: uppercase; font-weight: 800; letter-spacing: .15em; }
+.work-content h3 { font-family: var(--site-font-heading); font-size: 1.8rem; font-weight: 500; margin: 7px 0; }
+.work-content p { color: #F0F3EE; margin-bottom: 0; font-size: .9rem; max-width: 380px; }
+.web-banner { background: #E9EDE5; padding: 72px 0; }
+.web-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.web-image { width: 100%; min-height: 330px; height: 360px; object-fit: cover; border-radius: 22px; box-shadow: var(--shadow); }
+.web-points { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 30px; }
+.web-point { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; font-weight: 650; }
+.web-point .check { background: white; width: 25px; height: 25px; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
+.faq-list { max-width: 850px; margin: 35px auto 0; }
+details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+summary { cursor: pointer; list-style: none; font-weight: 750; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: #967431; font-size: 1.35rem; }
+details[open] summary::after { content: "−"; }
+details p { margin: 12px 0 0; color: var(--muted); font-size: .92rem; }
+.cta-band { background: var(--site-primary); color: white; padding: 62px 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.cta-inner h2 { margin: 0 0 8px; font-size: clamp(2rem, 3.5vw, 3rem); }
+.cta-inner p { color: #D5E1D7; margin: 0; }
+.footer { background: #0D2B1D; color: #F7F5EF; padding: 52px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr .8fr .8fr 1fr; gap: 32px; }
+.footer .brand-name strong { color: white; }
+.footer .brand-name span { color: #C3D0C6; }
+.footer-copy { color: #B9C7BD; max-width: 300px; font-size: .86rem; margin-top: 18px; }
+.footer h4 { margin: 0 0 14px; color: #E6C987; font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; }
+.footer-links { display: grid; gap: 10px; font-size: .85rem; color: #D6DED7; }
+.footer-links a:hover { color: #E6C987; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(255,255,255,.15); margin-top: 40px; padding-top: 20px; color: #B9C7BD; font-size: .75rem; }
+
+.cart-panel { margin-top: 26px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: #FFFEFA; }
+.cart-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:12px; }
+.cart-heading h3 { margin:8px 0 0; color:var(--site-primary); font-size:1.35rem; }
+.cart-empty { color:var(--muted); margin:8px 0 16px; }
+.cart-items { display:grid; gap:12px; }
+.cart-item { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); }
+.cart-item strong { display:block; color:var(--ink); }
+.cart-item small { display:block; color:var(--muted); margin-top:4px; }
+.cart-item-actions { display:flex; align-items:center; gap:12px; }
+.cart-item-price { font-weight:800; white-space:nowrap; }
+.cart-remove { border:1px solid var(--line); border-radius:999px; background:white; padding:7px 10px; color:#7C3027; font-size:.78rem; }
+.cart-total-row { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0 8px; font-weight:700; }
+.cart-total-row strong { color:var(--site-primary); font-size:1.5rem; }
+@media (max-width:560px) { .cart-panel {padding:16px;} .cart-heading {align-items:flex-start;} .cart-item {grid-template-columns:1fr;} .cart-item-actions {justify-content:space-between;} }
+
+.toast { position: fixed; z-index: 50; right: 18px; bottom: 18px; max-width: min(400px, calc(100% - 36px)); background: #102F21; color: white; padding: 15px 18px; border-radius: 12px; box-shadow: var(--shadow); display: none; }
+.toast.show { display: block; animation: toastIn .2s ease-out; }
+@keyframes toastIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@media (max-width: 1020px) {
+  .desktop-nav { gap: 14px; }
+  .desktop-nav a { font-size: .82rem; }
+  .desktop-nav .nav-cta { padding: 11px 15px; }
+  .hero-grid { gap: 30px; }
+  .hero-art { min-height: 350px; }
+  .hero-photo { height: 360px; }
+  .quote-layout { gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 780px) {
+  .container { width: min(100% - 36px, 620px); }
+  .nav-wrap { min-height: 94px; gap: 12px; }
+  .brand-full-logo { width:88px; height:88px; }
+  .desktop-nav { display: none; }
+  .menu-toggle { display: inline-flex; flex: 0 0 auto; }
+  .hero { min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; padding-block: 58px 65px; gap: 32px; }
+  h1 { font-size: clamp(2.65rem, 10vw, 4.1rem); }
+  .hero-art { width: min(100%, 500px); margin-inline: auto; min-height: 350px; }
+  .hero-photo { height: 360px; }
+  .floating-card.one { left: -5px; }
+  .floating-card.two { right: -5px; }
+  .trust-items { justify-content: center; flex-wrap: wrap; gap: 13px 24px; }
+  .section { padding: 70px 0; }
+  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+  .service-card img { height: 175px; }
+  .service-body { padding: 17px; }
+  .service-body p { min-height: 0; }
+  .quote-layout, .web-layout { grid-template-columns: 1fr; }
+  .quote-aside { position: relative; top: auto; }
+  .web-layout { gap: 28px; }
+  .web-image { height: 300px; min-height: 0; }
+  .cta-inner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 520px) {
+  .container { width: calc(100% - 30px); }
+  .announcement { font-size: .67rem; letter-spacing: .035em; }
+  .brand-full-logo { width:78px; height:78px; }
+  .hero-grid { padding-top: 44px; }
+  .hero-copy { font-size: 1rem; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  .hero-trust { gap: 12px 16px; font-size: .75rem; }
+  .hero-art { min-height: 300px; }
+  .hero-photo { height: 310px; border-radius: 45% 45% 16px 16px; }
+  .floating-card { padding: 11px 12px; }
+  .floating-card.one { width: 158px; bottom: 12px; }
+  .floating-card.two { width: 145px; top: 18px; }
+  .floating-card strong { font-size: .88rem; }
+  .trust-items { font-size: .75rem; gap: 10px 15px; }
+  .section { padding: 58px 0; }
+  .section-head { margin-bottom: 28px; }
+  .service-grid { grid-template-columns: 1fr; }
+  .service-card { display: grid; grid-template-columns: 38% 62%; }
+  .service-card img { height: 100%; min-height: 230px; }
+  .service-body { padding: 16px 14px; }
+  .service-body h3 { font-size: 1.05rem; }
+  .service-body p { font-size: .82rem; }
+  .service-foot { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .process-grid { grid-template-columns: 1fr; gap: 8px; }
+  .process-step { display: grid; grid-template-columns: 50px 1fr; column-gap: 15px; padding: 10px 0; }
+  .step-no { grid-row: span 2; margin-bottom: 0; }
+  .process-step h3 { margin: 0 0 5px; }
+  .process-step p { margin: 0; }
+  .quote-card, .quote-aside { padding: 22px 18px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field.full { grid-column: auto; }
+  .estimate-top { flex-direction: column; }
+  .estimate-price { font-size: 2rem; }
+  .field-help { display:block; color:var(--muted); font-size:.78rem; margin-top:6px; }
+  .file-list { margin-top:8px; padding:10px 12px; background:#F1F4EE; border-radius:10px; color:#405247; font-size:.82rem; overflow-wrap:anywhere; }
+  .checkout-demo { width:100%; margin-top:12px; }
+  input[type=file] { background:#fff; padding:10px; }
+  .quote-actions { flex-direction: column; }
+  .works-grid { grid-template-columns: 1fr; }
+  .work-tile { min-height: 250px; }
+  .web-points { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+}
+
+/* Approved forest-green and champagne-gold homepage direction */
+.announcement{min-height:42px;padding:9px clamp(18px,4vw,58px);display:flex;align-items:center;justify-content:space-between;gap:18px;background:#07351f;color:#fff8e7;font-size:.78rem;letter-spacing:.025em;text-align:left}
+.announcement a{color:#f0d58d}.announcement strong{color:#e8c875;letter-spacing:.16em;font-size:.72rem}
+.site-header{background:rgba(255,253,247,.97);border-bottom:3px solid #c5a45a}
+.nav-wrap{min-height:124px}.brand-full-logo{width:245px;height:118px;object-fit:contain}
+.desktop-nav{gap:clamp(12px,1.55vw,24px)}.desktop-nav a{font-weight:650;color:#173b2a}.nav-cta,.btn-primary{background:#174d36}.nav-cta{background:#d5a52f;color:#14261b;box-shadow:0 7px 18px rgba(160,117,34,.2)}
+.hero{min-height:500px;background:linear-gradient(110deg,#052d1c 0%,#0a3c26 52%,#135d3c 100%);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:auto -5% -65px -5%;height:150px;border-top:8px solid #d7b35c;border-radius:50% 48% 0 0;transform:rotate(-2deg);box-shadow:0 -7px 0 rgba(255,239,183,.35)}
+.hero-grid{position:relative;z-index:1;grid-template-columns:1fr 1fr;gap:40px;padding-block:58px 72px}
+.hero h1{font-size:clamp(2.65rem,4.2vw,4.25rem);line-height:1.08;color:#fff8e9;max-width:680px}.hero h1 em{display:block;color:#f0d58d;font-style:normal}
+.hero-copy{color:#f3f1e7;font-size:1.05rem}.hero .eyebrow{color:#e8c875}.hero-photo{height:390px;border:7px solid rgba(221,185,101,.85);border-radius:48% 48% 18px 18px;box-shadow:0 22px 55px rgba(0,0,0,.34)}
+.floating-card{border:1px solid #d8bd79;background:#fffaf0}.btn-gold{background:#e0ad35;color:#17271d;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.trust-strip{background:#f0e8d5;border-bottom:1px solid #d7c18e}.trust-items{color:#173b2a}
+.section-head.center h2{color:#123d29}.section-head.center .eyebrow{color:#a17a31}
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.service-card{border:1px solid #d8c99f;border-radius:13px;box-shadow:0 7px 18px rgba(14,48,31,.08)}.service-card:hover{box-shadow:0 16px 28px rgba(14,48,31,.17)}
+.service-card img{height:205px}.service-body{padding:20px}.service-body h3{color:#153d2b}.service-foot{border-color:#e4d9bd}.service-foot strong{color:#174d36}.text-link{color:#916c27}
+.process{background:#eee8d8}.supplies-section{background:#f7f3e9}.pricing-section{background:#f7f3e9}.footer{background:#082f20;color:#f5f0e2}.footer h4{color:#e7c875}.footer a{color:#f5f0e2}.footer-copy,.footer-bottom{color:#d6dfd4}.cta-band{background:linear-gradient(110deg,#0b3925,#174d36);color:#fff8e9}.cta-band h2{color:#f0d58d}
+@media(max-width:1020px){.announcement{justify-content:center;flex-wrap:wrap}.announcement span:last-child{display:none}.nav-wrap{min-height:104px}.brand-full-logo{width:210px;height:100px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.announcement{font-size:.72rem}.nav-wrap{min-height:92px}.brand-full-logo{width:185px;height:88px}.hero-grid{grid-template-columns:1fr;gap:24px;padding-block:48px 65px}.hero h1{font-size:clamp(2.4rem,9vw,3.6rem)}.hero-art{min-height:300px}.hero-photo{height:320px;width:min(100%,520px)}.desktop-nav{display:none}.menu-toggle{display:flex}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.announcement{gap:8px;min-height:38px;padding:7px 12px}.announcement strong{font-size:.65rem}.nav-wrap{min-height:82px}.brand-full-logo{width:160px;height:76px}.hero-grid{padding-block:38px 58px}.hero-photo{height:270px}.floating-card.one{left:0;bottom:10px}.floating-card.two{right:0;top:8px}.service-grid{grid-template-columns:1fr}.service-card img{height:215px}.section{padding:66px 0}}
+
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="announcement"><span>✉ <a href="mailto:allinonebrandingshop@gmail.com">allinonebrandingshop@gmail.com</a></span><strong>DESIGN • PRINT • BRAND</strong><span>Serving your custom branding and print needs</span></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="All-in-One Branding Shop home">
+        <img class="brand-full-logo" src="/assets/brand-logo.svg" alt="All-in-One Branding Shop — Design, Print, Brand">
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#pricing">Order Online</a><a href="#portfolio">Our Work</a><a href="/track-order.html">Track Order</a><a href="#web">Web Design</a>
+        <a class="nav-cta" href="#pricing">Start an Order <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#pricing">Order Online</a><a href="#portfolio">Our Work</a><a href="/track-order.html">Track Order</a><a href="#web">Web Design</a><a href="#faq">FAQs</a>
+      <a class="btn btn-primary" href="#pricing">Start an Order ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">DESIGN • PRINT • BRAND</span>
+          <h1>Your Vision. Our Creativity. <em>Your Brand, Our Priority.</em></h1>
+          <p class="hero-copy">Professional branding solutions for your business, with quality, creativity and style. From business cards and custom labels to packaging, stickers and websites, we help your brand stand out.</p>
+          <div class="hero-actions"><a class="btn btn-gold" href="#pricing">Explore Our Services <span>↗</span></a><a class="btn btn-outline" href="#web">Explore Web Design</a></div>
+          <div class="hero-trust"><span><b>✦</b> Personal service</span><span><b>✦</b> Clear estimates</span><span><b>✦</b> Print + digital</span></div>
+        </div>
+        <div class="hero-art">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=85" alt="Elegant stationery and printed brand materials arranged on a desk">
+          <div class="floating-card one"><span class="floating-icon">✳</span><small>One identity. Every touchpoint.</small><strong>Built around your brand.</strong></div>
+          <div class="floating-card two"><small>One shop, more possibilities</small><strong>Print + Web <span style="color:#B48C43">✦</span></strong></div>
+        </div>
+      </div>
+    </section>
+    <div class="trust-strip"><div class="container trust-items"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z"/></svg>Brand-ready quality</span><span>✓ Personalized options</span><span>✓ Upfront estimates</span><span>✓ Small business friendly</span></div></div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">What we create</span><h2>Everything your brand needs to show up beautifully.</h2><p>From the first business card to the website that grows your business, choose a service and tailor it to your needs.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80" alt="Printed business cards"><div class="service-body"><span class="service-tag">Print essentials</span><h3>Business Cards</h3><p>Single- or double-sided cards on quality cardstock, with optional rounded corners.</p><div class="service-foot"><strong>Draft prices from $15</strong><a class="text-link" href="#pricing" data-product="cards">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=800&q=80" alt="Printed flyers and promotional sheets"><div class="service-body"><span class="service-tag">Marketing print</span><h3>Flyers</h3><p>Promotional flyers in common sizes, on matte or glossy presentation paper.</p><div class="service-foot"><strong>Draft prices from $15</strong><a class="text-link" href="#pricing" data-product="flyers">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" alt="Printed restaurant menu"><div class="service-body"><span class="service-tag">Restaurant print</span><h3>Menus</h3><p>Restaurant, café, takeout and price-list menus in single- or double-sided formats.</p><div class="service-foot"><strong>Draft prices from $20</strong><a class="text-link" href="#pricing" data-product="menus">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Folded brochure and printed paper materials"><div class="service-body"><span class="service-tag">Business print</span><h3>Brochures</h3><p>Bi-fold and tri-fold brochure printing; scoring and folding requirements confirmed per job.</p><div class="service-foot"><strong>Draft prices from $30</strong><a class="text-link" href="#pricing" data-product="brochures">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" alt="Product packaging labels"><div class="service-body"><span class="service-tag">Product branding</span><h3>Product & Packaging Labels</h3><p>Paper labels for bottles, jars, bags, boxes, seals and retail packaging.</p><div class="service-foot"><strong>Draft prices from $15</strong><a class="text-link" href="#pricing" data-product="labels">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=80" alt="Waterproof labels and vinyl stickers"><div class="service-body"><span class="service-tag">Specialty labels</span><h3>Waterproof Labels</h3><p>Printable vinyl with compatible laminate; water resistance depends on materials and testing.</p><div class="service-foot"><strong>Draft prices from $25</strong><a class="text-link" href="#pricing" data-product="waterproof_labels">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?auto=format&fit=crop&w=800&q=80" alt="Custom logo and packaging stickers"><div class="service-body"><span class="service-tag">Custom cut</span><h3>Logo & Packaging Stickers</h3><p>Custom logo seals and packaging stickers in paper or printable vinyl options.</p><div class="service-foot"><strong>Draft prices from $12</strong><a class="text-link" href="#pricing" data-product="stickers">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Photo printing"><div class="service-body"><span class="service-tag">Photo printing</span><h3>Photo Prints</h3><p>4×6, 5×7 and 8×10 prints, with additional sizes available by request.</p><div class="service-foot"><strong>Draft prices from $7</strong><a class="text-link" href="#pricing" data-product="photos">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1493655161922-ef98929de9d8?auto=format&fit=crop&w=800&q=80" alt="Large format photo prints"><div class="service-body"><span class="service-tag">Large photo prints</span><h3>Large Photo Prints</h3><p>11×14 and 13×19 prints in-house where supported; larger sizes by partner quote.</p><div class="service-foot"><strong>Draft prices from $8</strong><a class="text-link" href="#pricing" data-product="largephotos">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80" alt="Printed invitations and thank-you cards"><div class="service-body"><span class="service-tag">Occasion print</span><h3>Invitations & Thank-you Cards</h3><p>Personalized invitations, greeting cards and thank-you cards on cardstock.</p><div class="service-foot"><strong>Draft prices from $20</strong><a class="text-link" href="#pricing" data-product="invitations">Configure ↗</a></div></div></article>
+          <article class="service-card"><img src="/assets/logo-label-design.svg" alt="Logo concepts, label layouts and print-ready brand artwork" loading="lazy"><div class="service-body"><span class="service-tag">Creative services</span><h3>Logo & Label Design</h3><p>Custom logo concepts, product label layouts and print-ready artwork preparation.</p><div class="service-foot"><strong>Custom quote</strong><a class="text-link" href="#pricing" data-product="design">Request ↗</a></div></div></article>
+          <article class="service-card"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Website design displayed on a desktop monitor"><div class="service-body"><span class="service-tag">Online presence</span><h3>Website Design & Development</h3><p>Mobile-friendly websites, online stores, booking forms and custom functionality.</p><div class="service-foot"><strong>Packages from $350</strong><a class="text-link" href="#web">Explore ↗</a></div></div></article>
+        </div>
+        <p class="disclaimer">Production note: Large-format items beyond 13×19 inches and specialty finishes may be fulfilled through a print partner. All prices shown are draft examples until your material, labor, waste, packaging, shipping and tax costs are finalized.</p>
+      </div>
+    </section>
+    <section class="section supplies-section" id="supplies">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Production planning</span><h2>What you’ll need beyond your machines.</h2><p>These are the papers, finishing supplies and packing materials that help turn your equipment into finished customer orders. Match every material to your printer and cutting machine before purchasing.</p></div>
+        <div class="supplies-table-wrap"><table class="supplies-table"><thead><tr><th scope="col">Customer product</th><th scope="col">What you’ll need beyond your machines</th></tr></thead><tbody>
+          <tr><th scope="row">Business cards</th><td>Heavy cardstock, paper trimmer, optional corner punch, protective sleeves.</td></tr>
+          <tr><th scope="row">Flyers and menus</th><td>Matte or gloss presentation paper, paper trimmer, optional laminating supplies for selected menu jobs.</td></tr>
+          <tr><th scope="row">Brochures</th><td>Suitable brochure paper, scoring board, bone folder and paper trimmer.</td></tr>
+          <tr><th scope="row">Product labels</th><td>Printable sticker paper or inkjet-printable vinyl, compatible cutting mat (including Joy Xtra mat where applicable), spare blade.</td></tr>
+          <tr><th scope="row">Waterproof labels</th><td>Printer-compatible printable vinyl, compatible clear laminate, cutting mat and material testing. Do not promise waterproof performance until tested.</td></tr>
+          <tr><th scope="row">Logo and packaging stickers</th><td>Printable vinyl or sticker paper, suitable mats, spare blade and transfer/application tools if needed.</td></tr>
+          <tr><th scope="row">4×6, 5×7 and 8×10 photos</th><td>Correct-size photo paper, protective sleeves and rigid photo mailers.</td></tr>
+          <tr><th scope="row">Invitations and thank-you cards</th><td>Cardstock, scoring board, paper trimmer and optional envelopes.</td></tr>
+          <tr><th scope="row">Logo and label design</th><td>Canva or other design software; no special physical supply required.</td></tr>
+          <tr><th scope="row">Large photo prints</th><td>11×14 and 13×19 compatible photo paper, sleeves and rigid mailers. Larger formats need a print partner unless you add suitable large-format equipment.</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">A simple process</span><h2>From idea to ready-to-share.</h2><p>Know what happens next, what you’ll pay, and what we need from you.</p></div>
+        <div class="process-grid">
+          <div class="process-step"><span class="step-no">01</span><h3>Choose your service</h3><p>Select the product or website package and tell us your size, quantity, finish and other requirements.</p></div>
+          <div class="process-step"><span class="step-no">02</span><h3>Review your estimate</h3><p>See a transparent draft breakdown. We confirm custom details, artwork, shipping and final price before payment.</p></div>
+          <div class="process-step"><span class="step-no">03</span><h3>Approve and create</h3><p>After your confirmed order and payment, we prepare the design or development work and keep you informed.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="customer-workflow">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">A professional customer experience</span><h2>Your project, handled with care at every step.</h2><p>We keep the process clear so you know what is needed before your order moves into production.</p></div>
+        <div class="process-grid">
+          <div class="process-step"><span class="step-no">01</span><h3>Place your order</h3><p>Choose a product, size, quantity, material and finish. Upload your artwork or request design help.</p></div>
+          <div class="process-step"><span class="step-no">02</span><h3>Artwork review</h3><p>We review dimensions, image quality, spelling, bleed and print requirements. If something needs attention, we contact you.</p></div>
+          <div class="process-step"><span class="step-no">03</span><h3>Approve your proof</h3><p>For design work, review the digital proof and approve it in writing. We do not send a customer proof to print before approval.</p></div>
+          <div class="process-step"><span class="step-no">04</span><h3>Print and finish</h3><p>We produce the approved artwork, then check alignment, color appearance, cutting and order quantity.</p></div>
+          <div class="process-step"><span class="step-no">05</span><h3>Quality check</h3><p>Each job receives a final review before it is packed. If a production issue is found, we address it before handoff.</p></div>
+          <div class="process-step"><span class="step-no">06</span><h3>Pickup or delivery</h3><p>We notify you when your order is ready. Use the order tracking page to check the latest status.</p></div>
+        </div>
+        <p class="field-help" style="text-align:center;margin-top:25px">Production timelines, proof rounds, shipping charges and final prices are confirmed with your order. Custom projects may require a separate quote.</p>
+      </div>
+    </section>
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Personalized pricing</span><h2>Build your order. See the estimate change.</h2><p>Choose the options below to see an illustrative estimate. Your final quote is confirmed after artwork, production details and delivery are reviewed.</p></div>
+        <div class="quote-layout">
+          <aside class="quote-aside"><span class="eyebrow">Your project, your choices</span><h2>Good design starts with clarity.</h2><p>We’ll show the key choices that affect the price, so you can make the right decision for your brand and budget.</p><div class="quote-benefit"><span class="check">✓</span><span>Quantity and size options</span></div><div class="quote-benefit"><span class="check">✓</span><span>Material, finish and design choices</span></div><div class="quote-benefit"><span class="check">✓</span><span>Shipping estimate shown separately</span></div><div class="quote-benefit"><span class="check">✓</span><span>Request confirmation before payment</span></div></aside>
+          <div class="quote-card">
+            <form id="quoteForm">
+              <div class="form-grid">
+                <div class="field full"><label for="product">What would you like to order?</label><select id="product" name="product"><option value="cards">Business cards</option><option value="flyers">Flyers</option><option value="menus">Menus</option><option value="brochures">Brochures (bi-fold / tri-fold)</option><option value="labels">Product and packaging labels (paper)</option><option value="waterproof_labels">Waterproof product labels</option><option value="stickers">Logo and packaging stickers</option><option value="photos">Photo prints (4×6, 5×7, 8×10)</option><option value="largephotos">Large photo prints (11×14, 13×19)</option><option value="invitations">Invitations and thank-you cards</option><option value="design">Logo and label design (custom quote)</option><option value="web">Website design / development</option></select></div>
+                <div class="field full" id="serviceOptionsHeading" style="padding:14px 16px;background:#f5f1e7;border:1px solid #c5a45a;border-radius:12px"><strong id="serviceOptionsTitle" style="color:#174d36">Business Cards — Product Options</strong><p id="serviceOptionsDescription" style="margin:5px 0 0;color:#5d625b;font-size:.9rem">Choose the specifications for this service. Your selections are saved separately when you add it to your cart.</p></div>
+                <div class="field" id="quantityField"><label for="quantity">Quantity</label><select id="quantity" name="quantity"><option value="1">1 print</option><option value="5">5 pieces / prints</option><option value="10">10 prints</option><option value="25">25 prints</option><option value="50">50 pieces</option><option value="100" selected>100 pieces</option><option value="250">250 pieces</option><option value="500">500 pieces</option><option value="custom">Custom quantity</option></select></div>
+                <div class="field" id="customQuantityField" hidden><label for="customQuantity">Enter quantity</label><input id="customQuantity" type="number" min="1" max="50000" value="750"></div>
+                <div class="field" id="sizeField"><label for="size">Size</label><select id="size" name="size"><option value="3.5x2">3.5 × 2 in (standard business card)</option><option value="2x2">2 × 2 in</option><option value="2x3" selected>2 × 3 in</option><option value="3x3">3 × 3 in</option><option value="4x6">4 × 6 in</option><option value="5x7">5 × 7 in</option><option value="8x10">8 × 10 in</option><option value="8.5x11">8.5 × 11 in</option><option value="11x14">11 × 14 in</option><option value="11x17">11 × 17 in</option><option value="13x19">13 × 19 in</option><option value="custom">Custom size</option></select></div>
+                <div class="field" id="materialField"><label for="material">Material / quality</label><select id="material" name="material"><option value="economy">Economy paper</option><option value="standard" selected>Standard quality</option><option value="premium">Premium cardstock / material</option><option value="waterproof">Waterproof vinyl</option></select></div>
+                <div class="field" id="finishField"><label for="finish">Finish</label><select id="finish" name="finish"><option value="matte">Matte</option><option value="glossy">Glossy</option><option value="laminated">Laminated / extra protection</option></select></div>
+                <div class="field" id="photoColorField" hidden><label for="photoColor">Photo color</label><select id="photoColor"><option value="color">Full color</option><option value="bw">Black and white</option></select></div>
+                <div class="field" id="photoQualityField" hidden><label for="photoQuality">Photo quality</label><select id="photoQuality"><option value="standard">Standard</option><option value="high" selected>High quality</option><option value="premium">Premium photo quality</option></select></div>
+                <div class="field" id="photoBorderField" hidden><label for="photoBorder">Photo border</label><select id="photoBorder"><option value="borderless">Borderless (where supported)</option><option value="white">White border</option></select></div>
+                <div class="field" id="sidesField"><label for="sides">Print sides</label><select id="sides" name="sides"><option value="single">Single-sided</option><option value="double" selected>Double-sided</option></select></div>
+                <div class="field" id="brochureFoldField" hidden><label for="brochureFold">Brochure fold</label><select id="brochureFold"><option value="bi-fold">Bi-fold</option><option value="tri-fold">Tri-fold</option></select></div>
+                <div class="field" id="shapeField" hidden><label for="shape">Label / sticker shape</label><select id="shape"><option value="rectangle">Rectangle</option><option value="square">Square</option><option value="circle">Circle</option><option value="oval">Oval</option><option value="custom-die-cut">Custom die-cut</option></select></div>
+                <div class="field full" id="designField"><label for="design">How would you like to handle your design?</label><select id="design" name="design"><option value="existing">I already have a design — no design fee</option><option value="simple" selected>Please create a simple design (+$25 draft fee)</option><option value="complex">I need a custom / complex design (+$50 draft fee)</option></select><small class="field-help">Design fees shown are examples and can be adjusted to your real pricing.</small></div>
+                <div class="field full" id="artworkField"><label for="artwork">Upload your existing artwork (optional)</label><input id="artwork" name="artwork" type="file" accept=".pdf,.png,.jpg,.jpeg,.svg,.ai,.eps,.psd" multiple><small class="field-help">Supported examples: PDF, PNG, JPG, SVG, AI, EPS and PSD. Artwork files are uploaded securely when you continue to checkout. Allowed file types and size limits apply.</small><div id="artworkList" class="file-list" aria-live="polite">No files selected.</div></div>
+                <div class="field" id="deliveryField"><label for="delivery">Delivery method</label><select id="delivery" name="delivery"><option value="pickup">Local pickup (estimate $0)</option><option value="standard" selected>Standard shipping (placeholder $8)</option><option value="priority">Priority shipping (placeholder $18)</option></select></div>
+                <div class="field"><label for="customerName">Your name</label><input id="customerName" name="customerName" autocomplete="name" placeholder="Full name"></div>
+                <div class="field"><label for="customerEmail">Email address</label><input id="customerEmail" name="customerEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+                <div class="field full"><label for="notes">Project notes (optional)</label><textarea id="notes" name="notes" placeholder="Tell us about your brand, artwork, deadline, or special requirements."></textarea></div>
+              </div>
+              <div class="estimate" aria-live="polite">
+                <div class="estimate-top"><div><div class="estimate-label">Your current estimate</div><div class="estimate-price" id="totalPrice">$63.00</div></div><div><div class="estimate-label">Estimated production</div><strong id="productionText">Confirm after review</strong></div></div>
+                <div class="estimate-lines"><div class="estimate-line"><span>Printing / production</span><strong id="basePrice">$30.00</strong></div><div class="estimate-line"><span>Design assistance</span><strong id="designPrice">$25.00</strong></div><div class="estimate-line"><span>Delivery estimate</span><strong id="shippingPrice">$8.00</strong></div><div class="estimate-line"><span>Tax</span><strong>Calculated at checkout if enabled</strong></div></div>
+                <p class="disclaimer">Demo pricing only—not a live checkout quote. Shipping is a placeholder, not a carrier rate. Taxes, custom dimensions, multiple designs and final production costs must be confirmed.</p>
+              </div>
+              <div class="quote-actions"><button class="btn btn-primary" type="button" id="addToCartButton">Add this service to cart <span aria-hidden="true">＋</span></button><button class="btn btn-gold" type="submit">Download Estimate</button><button class="btn btn-gold" type="button" id="copyQuote">Copy Estimate</button></div>
+              <section class="cart-panel" aria-labelledby="cartHeading">
+                <div class="cart-heading"><div><span class="eyebrow">One order, one payment</span><h3 id="cartHeading">Your shopping cart <span id="cartCount">(0)</span></h3></div><button type="button" class="text-link" id="clearCartButton">Clear cart</button></div>
+                <p id="emptyCartMessage" class="cart-empty">Your cart is empty. Configure a service above and select “Add this service to cart.”</p>
+                <div id="cartItems" class="cart-items" aria-live="polite"></div>
+                <div class="cart-total-row"><span>Combined estimated total</span><strong id="cartTotal">$0.00</strong></div>
+                <p class="disclaimer">Draft estimate only. Applicable taxes and final shipping must be confirmed. Items requiring a custom quote cannot be paid for until the final price is approved.</p>
+                <button class="btn btn-primary checkout-demo" type="button" id="checkoutButton">Review combined order for checkout <span aria-hidden="true">→</span></button>
+                <p class="disclaimer">Checkout sends the complete cart to the shop server, which recalculates prices and creates one Stripe Checkout session. Live checkout works only after Stripe keys and webhook are configured.</p>
+              </section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Creative possibilities</span><h2>Make every touchpoint feel like you.</h2><p>Use coordinated print and digital design to make your business look consistent wherever customers find you.</p></div>
+        <div class="works-grid">
+          <article class="work-tile"><img src="https://images.unsplash.com/photo-1634942536790-253e1e3f5b48?auto=format&fit=crop&w=1000&q=85" alt="Minimal premium stationery mockup"><div class="work-content"><span>Print identity</span><h3>Details customers remember.</h3><p>Business cards, labels and packaging that feel like one cohesive brand.</p></div></article>
+          <article class="work-tile"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=85" alt="Web and digital design workspace"><div class="work-content"><span>Digital presence</span><h3>Designed to work everywhere.</h3><p>Responsive websites with clear calls to action and a thoughtful user journey.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="about" style="background:#F5F1E7">
+      <div class="container"><div class="section-head center"><span class="eyebrow">About the shop</span><h2>One creative partner for the details that build your brand.</h2><p>All-in-One Branding Shop helps entrepreneurs and local businesses bring a consistent look to the places customers meet them: cards, labels, stickers, packaging and digital experiences. Our approach is personal, practical and focused on the details that make a business feel professional.</p></div><div class="trust-items" style="justify-content:center;flex-wrap:wrap"><span>Thoughtful design</span><span>Print-ready preparation</span><span>Clear communication</span><span>Small-business focus</span></div></div>
+    </section>
+    <section class="web-banner" id="web">
+      <div class="container web-layout">
+        <div><img class="web-image" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1100&q=85" alt="Website layout and responsive design on a desktop screen"></div>
+        <div><span class="eyebrow">Web design & development</span><h2>Your business deserves a website that works as hard as you do.</h2><p>From a clean landing page to an online store, we plan the experience around your customers—mobile-first, easy to navigate, and ready to grow.</p>
+          <div class="web-points"><div class="web-point"><span class="check">✓</span><span>Responsive mobile layouts</span></div><div class="web-point"><span class="check">✓</span><span>Contact and quote forms</span></div><div class="web-point"><span class="check">✓</span><span>Booking or ecommerce options</span></div><div class="web-point"><span class="check">✓</span><span>Basic SEO structure</span></div></div>
+          <a class="btn btn-primary" href="#pricing" id="webQuoteBtn">Plan My Website ↗</a><p class="disclaimer">Draft starting prices: landing page from $350; up to 5 pages from $750; ecommerce from $1,500. Final price depends on scope, features, content and integrations.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="container"><div class="section-head center"><span class="eyebrow">Questions, answered</span><h2>A little clarity before you order.</h2></div>
+        <div class="faq-list">
+          <details><summary>Are the prices shown final?</summary><p>No. Prices shown are starting estimates and may change after material, artwork, finishing, quantity and delivery requirements are reviewed. Final production prices should be checked against material costs, print time, waste, design labor, packaging, profit and applicable tax.</p></details>
+          <details><summary>Can I use my own design?</summary><p>Yes. Use the artwork upload field in the online order form. Production files are reviewed for size, resolution, bleed and print readiness before proof approval.</p></details>
+          <details><summary>How is shipping calculated?</summary><p>Shipping amounts shown are estimates. Final shipping is confirmed with the order details before production. The live website should request a real carrier rate based on destination ZIP code, package size and weight, and shipping speed.</p></details>
+          <details><summary>Can I order a custom quantity or size?</summary><p>Yes. Select custom quantity and leave details in the notes. Non-standard sizes, multiple label designs, specialty materials and complex cuts may require a custom quote.</p></details>
+          <details><summary>Will you print before I approve the design?</summary><p>No. When a proof is part of your project, production starts only after you approve the proof in writing. Please check spelling, phone numbers, colors, sizes and all final details carefully.</p></details>
+          <details><summary>How do I check my order status?</summary><p>After checkout, save your order number and use the Track Order link with the same email address used at checkout. Status updates are provided as the order moves through production.</p></details>
+          <details><summary>Can you guarantee exact screen-to-print colors?</summary><p>Screen colors can differ from printed colors because displays, inks, materials and print processes vary. We can discuss material samples or a paid test print for color-sensitive projects.</p></details>
+          <details><summary>What if my order arrives damaged or has a production issue?</summary><p>Contact us promptly with your order number and clear photos of the issue. We review concerns under the shop's published reprint and refund policy and applicable law.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band"><div class="container cta-inner"><div><h2>Ready to bring your brand to life?</h2><p>Start with a print quote or tell us about your website idea.</p></div><a class="btn btn-gold" href="#pricing">Start Your Project ↗</a></div></section>
+  </main>
+  <footer class="footer">
+    <div class="container"><div class="footer-grid">
+      <div><a class="brand" href="#home"><img class="brand-full-logo" src="/assets/brand-logo.svg" alt="All-in-One Branding Shop — Design, Print, Brand"></a><p class="footer-copy">Print, product branding and digital experiences designed to help your business look its best.</p></div>
+      <div><h4>Explore</h4><div class="footer-links"><a href="#services">Services</a><a href="#about">About the shop</a><a href="#pricing">Pricing & quote</a><a href="#portfolio">Our work</a><a href="#web">Website services</a><a href="/brand-kit/business-card.html">Business card template</a><a href="/brand-kit/invoice.html">Invoice template</a><a href="/brand-kit/order-form.html">Print order form</a></div></div>
+      <div><h4>Get started</h4><div class="footer-links"><a href="#pricing">Build an order</a><a href="#process">How it works</a><a href="/track-order.html">Track an order</a><a href="#faq">FAQs</a></div></div>
+      <div><h4>Contact</h4><div class="footer-links"><a href="mailto:allinonebrandingshop@gmail.com">allinonebrandingshop@gmail.com</a><a href="https://allinonebrandingshop.com">allinonebrandingshop.com</a></div></div>
+    </div><div class="footer-bottom"><span>© <span id="year"></span> All-in-One Branding Shop. All rights reserved.</span><span>Made for ambitious small businesses.</span></div></div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/api-config.js"></script>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  // Uses the local Express server on localhost and the Render API on the live domain.
+  const API_BASE = window.AIO_API_BASE || "";
+  const menuToggle = $("menuToggle");
+  const mobileNav = $("mobileNav");
+  const toast = $("toast");
+  let toastTimer;
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 3800);
+  }
+  menuToggle.addEventListener("click", () => {
+    const open = mobileNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    menuToggle.innerHTML = open
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  });
+  mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    mobileNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  }));
+  const pricing = {
+    cards: { label: "Business cards", tiers: {50: 15, 100: 22, 250: 35, 500: 55}, unit: 0.16 },
+    flyers: { label: "Flyers", tiers: {25: 15, 50: 22, 100: 35, 250: 65, 500: 110}, unit: 0.38 },
+    menus: { label: "Menus", tiers: {25: 20, 50: 30, 100: 48, 250: 90, 500: 150}, unit: 0.52 },
+    brochures: { label: "Brochures", tiers: {25: 30, 50: 45, 100: 70, 250: 135, 500: 225}, unit: 0.8 },
+    labels: { label: "Paper product and packaging labels", tiers: {50: 15, 100: 22, 250: 40, 500: 70}, unit: 0.18 },
+    waterproof_labels: { label: "Waterproof product labels", tiers: {50: 25, 100: 40, 250: 75, 500: 135}, unit: 0.33 },
+    stickers: { label: "Logo and packaging stickers", tiers: {25: 12, 50: 18, 100: 28, 250: 50, 500: 85}, unit: 0.26 },
+    photos: { label: "Photo prints", tiers: {10: 7, 25: 16, 50: 30, 100: 55}, unit: 0.42 },
+    largephotos: { label: "Large photo prints", tiers: {5: 40, 10: 80, 25: 200, 50: 400}, unit: 2.8 },
+    invitations: { label: "Invitations and thank-you cards", tiers: {25: 20, 50: 30, 100: 48, 250: 90, 500: 150}, unit: 0.52 }
+  };
+  const money = n => new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"}).format(n);
+  const cart = [];
+  let cartSequence = 1;
+  function renderCart() {
+    const items = $("cartItems");
+    items.innerHTML = "";
+    $("cartCount").textContent = `(${cart.length})`;
+    $("emptyCartMessage").hidden = cart.length > 0;
+    cart.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "cart-item";
+      const detail = document.createElement("div");
+      const title = document.createElement("strong");
+      title.textContent = item.label;
+      const note = document.createElement("small");
+      note.textContent = item.detail;
+      detail.append(title, note);
+      const actions = document.createElement("div");
+      actions.className = "cart-item-actions";
+      const price = document.createElement("span");
+      price.className = "cart-item-price";
+      price.textContent = item.total == null ? "Quote needed" : money(item.total);
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "cart-remove";
+      remove.textContent = "Remove";
+      remove.addEventListener("click", () => { const i = cart.findIndex(x => x.id === item.id); if (i >= 0) cart.splice(i, 1); renderCart(); });
+      actions.append(price, remove);
+      row.append(detail, actions);
+      items.append(row);
+    });
+    const knownTotal = cart.reduce((sum, item) => sum + (item.total == null ? 0 : item.total), 0);
+    const hasQuote = cart.some(item => item.total == null);
+    $("cartTotal").textContent = cart.length ? (hasQuote ? `${money(knownTotal)} + custom quote` : money(knownTotal)) : money(0);
+  }
+  function describeCartItem(q) {
+    if (q.web) return `${q.plan} website package`;
+    if (q.product === "brochures") return `${q.quantity} ${q.foldType || "bi-fold"} brochures · ${q.size || "8.5x11"}`;
+    if (q.designOnly) return "Custom design service — quote required";
+    return `${q.quantity} ${(q.product === "photos" || q.product === "largephotos") ? "prints" : "pieces"} · ${q.size || "standard size"} · ${q.material || "standard material"}${q.shape ? " · " + q.shape + " shape" : ""} · ${q.finish || "standard finish"} · ${q.design || "existing artwork"} design`;
+  }
+  function getQuantity() {
+    const val = $("quantity").value;
+    return val === "custom" ? Math.max(1, Math.min(50000, Number($("customQuantity").value) || 1)) : Number(val);
+  }
+  const serviceProfiles = {
+    cards:{title:"Business Cards",desc:"Standard 3.5 × 2 inch cards. Choose cardstock, sides, finish and quantity.",sizes:["3.5x2"],materials:["standard","premium"],finishes:["matte","glossy","laminated"],quantities:[50,100,250,500],sides:true},
+    flyers:{title:"Flyers",desc:"Promotional print options for your flyer size, paper, sides and quantity.",sizes:["4x6","5x7","8.5x11","11x17","custom"],materials:["economy","standard","premium"],finishes:["matte","glossy"],quantities:[25,50,100,250,500],sides:true},
+    menus:{title:"Menus",desc:"Restaurant and takeout menu options, including paper, protection and print sides.",sizes:["5x7","8.5x11","11x17","custom"],materials:["standard","premium"],finishes:["matte","glossy","laminated"],quantities:[25,50,100,250,500],sides:true},
+    brochures:{title:"Brochures",desc:"Choose brochure size, bi-fold or tri-fold, paper and quantity.",sizes:["8.5x11","11x17","custom"],materials:["standard","premium"],finishes:["matte","glossy"],quantities:[25,50,100,250,500],sides:true,fold:true},
+    labels:{title:"Paper Product Labels",desc:"Paper label options: choose label size, shape, paper quality, finish and quantity. Use project notes for exact custom dimensions.",sizes:["2x2","2x3","3x3","custom"],materials:["economy","standard","premium"],finishes:["matte","glossy"],quantities:[50,100,250,500],shape:true},
+    waterproof_labels:{title:"Waterproof Product Labels",desc:"Waterproof vinyl label options: choose size, shape, protective finish and quantity. Use project notes for exact dimensions.",sizes:["2x2","2x3","3x3","custom"],materials:["waterproof"],finishes:["matte","glossy","laminated"],quantities:[50,100,250,500],shape:true},
+    stickers:{title:"Logo & Packaging Stickers",desc:"Sticker options: choose size, shape, material, finish and quantity. Add contour-cut instructions in project notes.",sizes:["2x2","2x3","3x3","custom"],materials:["standard","premium","waterproof"],finishes:["matte","glossy","laminated"],quantities:[50,100,250,500],shape:true},
+    photos:{title:"Photo Prints",desc:"Choose 4×6, 5×7 or 8×10 photo paper, color, quality, border and quantity.",sizes:["4x6","5x7","8x10"],materials:["standard","premium"],finishes:["glossy","matte"],quantities:[10,25,50,100],photo:true},
+    largephotos:{title:"Large Photo Prints",desc:"Choose 11×14 or 13×19 large-format photo paper, quality and quantity.",sizes:["11x14","13x19"],materials:["standard","premium"],finishes:["glossy","matte"],quantities:[5,10,25,50],photo:true},
+    invitations:{title:"Invitations & Thank-You Cards",desc:"Choose card size, cardstock, sides, finish and quantity.",sizes:["4x6","5x7","custom"],materials:["standard","premium"],finishes:["matte","glossy"],quantities:[25,50,100,250,500],sides:true},
+    design:{title:"Logo & Label Design",desc:"Custom design work is quoted after reviewing your project details. Add requirements in notes and upload references.",quote:true},
+    web:{title:"Website Design & Development",desc:"Choose a website package. Custom functionality requires a project quote.",web:true}
+  };
+  const optionLabels={"3.5x2":"3.5 × 2 in (standard business card)","2x2":"2 × 2 in","2x3":"2 × 3 in","3x3":"3 × 3 in","4x6":"4 × 6 in","5x7":"5 × 7 in","8x10":"8 × 10 in","8.5x11":"8.5 × 11 in","11x14":"11 × 14 in","11x17":"11 × 17 in","13x19":"13 × 19 in",custom:"Custom size"};
+  const optionText={economy:"Economy paper",standard:"Standard quality",premium:"Premium cardstock / material",waterproof:"Waterproof vinyl"};
+  function setSelectOptions(id, values, labels, preferred) {
+    const select=$(id), current=select.value;
+    select.replaceChildren(...values.map(value=>{const o=document.createElement("option");o.value=String(value);o.textContent=labels[value]||String(value);return o;}));
+    select.value=values.includes(current)?current:(values.includes(preferred)?preferred:values[0]);
+  }
+  function applyServiceProfile(reset=false) {
+    const product=$("product").value, profile=serviceProfiles[product]||serviceProfiles.cards;
+    const photo=!!profile.photo, quote=!!profile.quote, web=!!profile.web;
+    $("serviceOptionsTitle").textContent=profile.title+" — Product Options";
+    $("serviceOptionsDescription").textContent=profile.desc;
+    // Every service starts from its own allowed option lists. No options from another
+    // service remain in the dropdown after switching products.
+    ["quantityField","sizeField","materialField","finishField","designField"].forEach(id=>$(id).hidden=quote||web);
+    $("sidesField").hidden=quote||web||!profile.sides;
+    $("brochureFoldField").hidden=!profile.fold;
+    $("shapeField").hidden=!profile.shape;
+    ["photoColorField","photoQualityField","photoBorderField"].forEach(id=>$(id).hidden=!photo);
+    $("deliveryField").hidden=quote||web;
+    if(profile.sizes) {
+      setSelectOptions("size",profile.sizes,optionLabels,product==="cards"?"3.5x2":profile.sizes[0]);
+      setSelectOptions("material",profile.materials,optionText,profile.materials[0]);
+      setSelectOptions("finish",profile.finishes,{matte:"Matte",glossy:"Glossy",laminated:"Laminated / extra protection"},profile.finishes[0]);
+    }
+    if(profile.quantities) {
+      const quantityLabels=Object.fromEntries(profile.quantities.map(n=>[n,`${n} ${photo?"prints":"pieces"}`]).concat([["custom","Custom quantity"]]));
+      const currentQuantity=Number($("quantity").value);
+      const preferred=profile.quantities.includes(currentQuantity)?currentQuantity:profile.quantities[0];
+      setSelectOptions("quantity",profile.quantities.concat(["custom"]),quantityLabels,preferred);
+    }
+    if(reset) {
+      $("customQuantity").value="750";
+      $("photoColor").value="color"; $("photoQuality").value="high"; $("photoBorder").value="borderless";
+      $("sides").value="single"; $("brochureFold").value="bi-fold"; $("shape").value="rectangle";
+      $("design").value="existing"; $("delivery").value="standard";
+      $("artwork").value=""; $("artworkList").textContent="No files selected."; $("notes").value="";
+    }
+    $("quantityField").querySelector("label").textContent=photo?"Number of photo prints":"Order quantity";
+    $("sizeField").querySelector("label").textContent=photo?"Photo print size":(product==="cards"?"Business card size":"Product size / dimensions");
+    $("materialField").querySelector("label").textContent=photo?"Photo paper quality":(product==="cards"?"Cardstock / paper quality":"Material / paper quality");
+    $("finishField").querySelector("label").textContent=photo?"Photo paper finish":"Finish / protection";
+    $("customQuantityField").hidden=quote||web||$("quantity").value!=="custom";
+  }
+  function calculate() {
+    const product = $("product").value;
+    const profile=serviceProfiles[product]||serviceProfiles.cards;
+    const web = product === "web";
+    const designOnly = product === "design";
+    const photo = product === "photos" || product === "largephotos";
+    $("quantityField").querySelector("label").textContent = photo ? "Number of photo prints" : "Quantity";
+    $("sizeField").querySelector("label").textContent = photo ? "Photo print size" : (product==="cards"?"Business card size":"Product size / dimensions");
+    $("materialField").querySelector("label").textContent = photo ? "Photo paper quality" : (product==="cards"?"Cardstock":"Material / paper quality");
+    $("finishField").querySelector("label").textContent = photo ? "Photo paper finish" : "Finish";
+    $("quantityField").hidden=!!profile.quote||!!profile.web;
+    $("sizeField").hidden=!!profile.quote||!!profile.web;
+    $("materialField").hidden=!!profile.quote||!!profile.web;
+    $("finishField").hidden=!!profile.quote||!!profile.web;
+    $("sidesField").hidden=!!profile.quote||!!profile.web||!profile.sides;
+    $("designField").hidden=!!profile.quote||!!profile.web;
+    $("brochureFoldField").hidden=!profile.fold;
+    ["photoColorField","photoQualityField","photoBorderField"].forEach(id=>$(id).hidden=!photo);
+    $("customQuantityField").hidden = web || designOnly || $("quantity").value !== "custom";
+    $("deliveryField").hidden = web || designOnly;
+    if (designOnly) {
+      $("totalPrice").textContent = "Custom quote";
+      $("basePrice").textContent = "To be quoted";
+      $("designPrice").textContent = "Scope-based";
+      $("shippingPrice").textContent = "To be confirmed";
+      $("productionText").textContent = "Design consultation";
+      $("totalPrice").dataset.total = "";
+      $("basePrice").dataset.base = "";
+      $("designPrice").dataset.design = "0";
+      $("shippingPrice").dataset.shipping = "0";
+      return { product, quantity: 1, total: null, base: null, designCost: 0, shipping: 0, web: false, designOnly: true, notes: $("notes").value };
+    }
+    if (web) {
+      const plan = $("webPlan") ? $("webPlan").value : "landing";
+      const starts = {landing:350,small:750,large:1200,ecommerce:1500,custom:0};
+      const price = starts[plan] || 0;
+      $("totalPrice").textContent = price ? money(price) : "Custom quote";
+      $("basePrice").textContent = price ? money(price) : "To be quoted";
+      $("designPrice").textContent = "Included / scope-based";
+      $("shippingPrice").textContent = "Not applicable";
+      $("productionText").textContent = "Scope confirmation";
+      $("totalPrice").dataset.total = price ? String(price) : "";
+      $("basePrice").dataset.base = price ? String(price) : "";
+      $("designPrice").dataset.design = "0";
+      $("shippingPrice").dataset.shipping = "0";
+      $("deliveryField").hidden = true;
+      return { product, quantity: 1, base: price, design: 0, shipping: 0, total: price ? price : null, web: true, plan };
+    }
+    if (product === "waterproof_labels" && $("material").value !== "waterproof") $("material").value = "waterproof";
+    const item = pricing[product];
+    const quantity = getQuantity();
+    let base;
+    if (photo) {
+      if (item.tiers[quantity]) base = item.tiers[quantity];
+      else if (quantity < 10) base = Math.max(2, quantity * 0.8);
+      else base = Math.max(item.tiers[50] || item.unit * 10, quantity * item.unit);
+    } else if (item.tiers[quantity]) base = item.tiers[quantity];
+    else base = Math.max(20, quantity * item.unit);
+    const sizeMult = (photo ? {"4x6":1,"5x7":1.45,"8x10":2.5,"8.5x11":3,"11x14":4.2,"13x19":6,custom:1.5} : { "2x2": .8, "2x3": 1, "3x3": 1.25, "4x6": 1.8, "5x7":1.4, "8.5x11":1.7, "11x14":2.2, "11x17":2.8, custom: 1.5 })[$("size").value] || 1;
+    const materialMult = { economy: .8, standard: 1, premium: 1.3, waterproof: 1.45 }[$("material").value] || 1;
+    const finishMult = { matte: 1, glossy: 1.08, laminated: 1.2 }[$("finish").value] || 1;
+    const sidesMult = ["cards","flyers","menus","brochures","invitations"].includes(product) && $("sides").value === "double" ? 1.18 : 1;
+    const photoQualityMult = photo ? ({standard:1,high:1.25,premium:1.55}[$("photoQuality").value] || 1) : 1;
+    const photoColorMult = photo && $("photoColor").value === "bw" ? .9 : 1;
+    base = Math.round(base * sizeMult * materialMult * finishMult * sidesMult * photoQualityMult * photoColorMult * 100) / 100;
+    const design = { existing: 0, simple: 25, complex: 50 }[$("design").value] || 0;
+    const shipping = { pickup: 0, standard: 8, priority: 18 }[$("delivery").value] || 0;
+    const total = base + design + shipping;
+    $("totalPrice").textContent = money(total);
+    $("basePrice").textContent = money(base);
+    $("designPrice").textContent = money(design);
+    $("shippingPrice").textContent = money(shipping);
+    $("productionText").textContent = "Confirm after review";
+    $("totalPrice").dataset.total = String(total);
+    $("basePrice").dataset.base = String(base);
+    $("designPrice").dataset.design = String(design);
+    $("shippingPrice").dataset.shipping = String(shipping);
+    return { product, quantity, size: $("size").value, material: $("material").value, finish: $("finish").value, sides: $("sides").value, foldType: product === "brochures" ? $("brochureFold").value : undefined, design: $("design").value, delivery: $("delivery").value, photoColor: photo ? $("photoColor").value : undefined, photoQuality: photo ? $("photoQuality").value : undefined, photoBorder: photo ? $("photoBorder").value : undefined, shape: profile.shape ? $("shape").value : undefined, base, designCost: design, shipping, total, web: false, notes: $("notes").value };
+  }
+  function ensureWebPlan() {
+    if ($("webPlan")) return;
+    const field = document.createElement("div");
+    field.className = "field full";
+    field.id = "webPlanField";
+    field.style.cssText = "padding:14px 16px;border:1px solid #c5a45a;border-radius:12px;background:#f5f1e7";
+    field.innerHTML = '<strong style="display:block;color:#174d36;margin-bottom:8px">Website Design & Development — Product Options</strong><label for="webPlan">Choose your website package</label><select id="webPlan"><option value="landing">Landing page — from $350</option><option value="small">Small business site (up to 5 pages) — from $750</option><option value="large">Website (up to 8 pages) — from $1,200</option><option value="ecommerce">Basic ecommerce — from $1,500</option><option value="custom">Custom functionality — request a quote</option></select><small class="field-help">Choose the closest package. Page count, content, forms, booking, ecommerce and integrations are confirmed before the final quote.</small>';
+    $("quantityField").parentElement.insertBefore(field, $("quantityField"));
+    $("webPlan").addEventListener("change", calculate);
+  }
+  function removeWebPlan() { const field = $("webPlanField"); if (field) field.remove(); }
+  $("product").addEventListener("change", () => {
+    const product = $("product").value;
+    if (product === "web") ensureWebPlan(); else removeWebPlan();
+    applyServiceProfile(true);
+    calculate();
+  });
+  ["quantity","customQuantity","size","material","finish","sides","brochureFold","design","delivery","notes","photoColor","photoQuality","photoBorder","shape"].forEach(id => { if ($(id)) $(id).addEventListener("input", calculate); });
+  $("artwork").addEventListener("change", () => {
+    const files = Array.from($("artwork").files || []);
+    $("artworkList").textContent = files.length ? files.map(file => `${file.name} (${Math.round(file.size / 1024)} KB)`).join(" · ") : "No files selected.";
+    if (files.length && $("design").value !== "existing") { $("design").value = "existing"; calculate(); showToast("Existing artwork selected. The design fee was set to $0; choose design help again if you need a new design."); }
+  });
+  $("design").addEventListener("change", () => {
+    if ($("design").value !== "existing") { $("artwork").value = ""; $("artworkList").textContent = "No files selected. You can describe your design in the project notes."; }
+    calculate();
+  });
+  $("addToCartButton").addEventListener("click", () => {
+    const q = calculate();
+    const label = q.web ? "Website design / development" : (q.designOnly ? "Logo and label design" : (pricing[q.product]?.label || q.product));
+    const designChoice = q.design || "scope-based";
+    const detail = `${q.designOnly ? "Custom logo concepts / label layout / print-ready artwork; quote required" : describeCartItem(q)}${(q.product === "photos" || q.product === "largephotos") ? ` · ${q.photoColor === "bw" ? "black & white" : "color"} · ${q.photoQuality} quality · ${q.photoBorder} · photo paper ${q.finish}` : ""}${q.designCost ? ` · design ${money(q.designCost)}` : ""}${q.shipping ? ` · delivery ${money(q.shipping)}` : " · pickup / no delivery fee"}`;
+    cart.push({ id: cartSequence++, product: q.product, label, detail, total: q.total, quote: q.total == null, configuration: {...q}, artworkFiles: Array.from($("artwork").files || []), artworkNames: Array.from($("artwork").files || []).map(f => f.name) });
+    renderCart();
+    showToast(q.total == null ? "Added to cart. This item needs a confirmed quote before payment." : `${label} added to your cart. Add another service or review the combined order below.`);
+    $("cartHeading").scrollIntoView({behavior:"smooth",block:"center"});
+  });
+  $("clearCartButton").addEventListener("click", () => { cart.splice(0, cart.length); renderCart(); showToast("Your cart is now empty."); });
+  $("checkoutButton").addEventListener("click", async () => {
+    if (!cart.length) { showToast("Your cart is empty. Add at least one service first."); return; }
+    const quoteItems = cart.filter(item => item.total == null);
+    if (quoteItems.length) { showToast("Your cart includes a custom-quote service. The final price must be approved before checkout."); return; }
+    const customerName = $("customerName").value.trim();
+    const customerEmail = $("customerEmail").value.trim();
+    if (!customerName || !customerEmail) { showToast("Please enter your name and email before continuing to secure checkout."); $("customerName").focus(); return; }
+    const button = $("checkoutButton");
+    const originalText = button.textContent;
+    button.disabled = true; button.textContent = "Connecting to secure checkout…";
+    try {
+      const payload = cart.map(item => ({ configuration: item.configuration }));
+      const formData = new FormData();
+      formData.append("cart", JSON.stringify(payload));
+      formData.append("customerName", customerName);
+      formData.append("customerEmail", customerEmail);
+      formData.append("notes", $("notes").value || "");
+      cart.forEach((item, index) => (item.artworkFiles || []).forEach(file => formData.append("artwork", file, file.name)));
+      const response = await fetch(`${API_BASE}/api/create-checkout-session`, { method: "POST", body: formData });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || "Checkout could not be started. Please try again.");
+      if (!result.url) throw new Error("The server did not return a secure checkout link.");
+      window.location.assign(result.url);
+    } catch (error) {
+      showToast(error.message || "Could not connect to checkout. Please make sure the website backend is running.");
+      button.disabled = false; button.textContent = originalText;
+    }
+  });
+  $("quoteForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const quote = calculate();
+    const lines = [
+      "ALL-IN-ONE BRANDING SHOP — ORDER SUMMARY (PREVIEW)",
+      cart.length ? "Cart items: " + cart.length : "Cart is empty; this summary is for the current configured service.",
+      ...cart.map((item, index) => `Cart item ${index + 1}: ${item.label} — ${item.detail} — ${item.total == null ? "custom quote" : money(item.total)}`),
+      "Current configured service: " + (quote.web ? "Website development" : (quote.designOnly ? "Logo and label design" : (pricing[quote.product]?.label || quote.product))),
+      quote.web ? "Package: " + quote.plan : "Quantity: " + quote.quantity,
+      quote.size ? "Size: " + quote.size : "",
+      quote.material ? "Material: " + quote.material : "",
+      quote.finish ? "Finish: " + quote.finish : "",
+      quote.photoColor ? "Photo color: " + quote.photoColor : "",
+      quote.photoQuality ? "Photo quality: " + quote.photoQuality : "",
+      quote.photoBorder ? "Photo border: " + quote.photoBorder : "",
+      quote.sides ? "Sides: " + quote.sides : "",
+      quote.design ? "Design choice: " + quote.design : "",
+      quote.delivery ? "Delivery: " + quote.delivery : "",
+      "Production: " + (quote.base == null ? "custom quote" : money(quote.base)),
+      "Design: " + money(quote.designCost || 0),
+      "Shipping: " + money(quote.shipping || 0),
+      "Illustrative total: " + (quote.total == null ? "custom quote required" : money(quote.total)),
+      "Customer: " + ($("customerName").value || "Not provided"),
+      "Email: " + ($("customerEmail").value || "Not provided"),
+      "Artwork files selected: " + (Array.from($("artwork").files || []).map(file => file.name).join(", ") || "None"),
+      "Notes: " + ($("notes").value || "None"),
+      "",
+      "This is a preview summary, not a submitted order or payment. Selected artwork files are not attached to this text file or uploaded to a server."
+    ].filter(Boolean).join("\n");
+    const blob = new Blob([lines], {type:"text/plain;charset=utf-8"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "all-in-one-branding-quote-request.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast("Your quote request was downloaded as a text file. This preview does not send it to the shop yet.");
+  });
+  $("copyQuote").addEventListener("click", async () => {
+    const q = calculate();
+    const summary = `All-in-One Branding Shop estimate\nService: ${q.web ? "Website development" : (q.designOnly ? "Logo and label design" : pricing[q.product].label)}\nPhoto options: ${(q.product === "photos" || q.product === "largephotos") ? `${q.photoColor}, ${q.photoQuality}, ${q.photoBorder}` : "N/A"}\nQuantity: ${q.web ? "N/A" : q.quantity}\nProduction: ${q.base == null ? "Custom quote" : money(q.base)}\nDesign: ${money(q.designCost || 0)}\nShipping: ${money(q.shipping || 0)}\nIllustrative total: ${q.total == null ? "Custom quote required" : money(q.total)}\nDraft estimate only; not a final checkout price.`;
+    try { await navigator.clipboard.writeText(summary); showToast("Estimate copied."); }
+    catch { const ta = document.createElement("textarea"); ta.value = summary; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove(); showToast("Estimate copied."); }
+  });
+  document.querySelectorAll("[data-product]").forEach(link => link.addEventListener("click", () => {
+    const selectedProduct = link.dataset.product;
+    $("product").value = selectedProduct;
+    if (selectedProduct === "web") ensureWebPlan(); else removeWebPlan();
+    applyServiceProfile(true);
+    calculate();
+  }));
+  $("webQuoteBtn").addEventListener("click", () => {
+    $("product").value = "web";
+    ensureWebPlan();
+    applyServiceProfile(true);
+    calculate();
+  });
+  $("year").textContent = new Date().getFullYear();
+  applyServiceProfile(true);
+  calculate();
+  renderCart();
+})();
+</script>
+</body>
+</html>

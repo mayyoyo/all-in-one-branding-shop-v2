@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#174D36"><meta name="description" content="Check the latest status of your All-in-One Branding Shop order.">
+<link rel="icon" href="/assets/brand-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/css/brand-system.css">
+<title>Track Your Order | All-in-One Branding Shop</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/" aria-label="All-in-One Branding Shop home"><img src="/assets/brand-logo.svg" alt="All-in-One Branding Shop"></a><a class="back" href="/">Back to shop</a></header>
+<main class="track-wrap"><section class="track-card"><p class="eyebrow">DESIGN • PRINT • BRAND</p><h1>Track your order.</h1><p class="intro">Enter the order number from your confirmation and the email address used at checkout. We’ll show the latest status recorded by our team.</p>
+<form id="trackForm"><label for="orderId">Order number</label><input id="orderId" name="order_id" required autocomplete="off" placeholder="Example: AIO-...">
+<label for="email">Checkout email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"><button type="submit" id="submitButton">Check order status</button></form>
+<p id="message" class="message" role="status" aria-live="polite"></p><section id="result" class="result" hidden><div class="result-top"><span>ORDER STATUS</span><strong id="statusText"></strong></div><p><b>Order:</b> <span id="resultId"></span></p><p><b>Placed:</b> <span id="created"></span></p><p><b>Payment:</b> <span id="payment"></span></p><p><b>Delivery:</b> <span id="delivery"></span></p><p class="hint">Status information reflects the latest update entered by the shop. Carrier tracking details, when available, are shared separately.</p></section>
+<p class="contact">Need help? <a href="mailto:allinonebrandingshop@gmail.com">allinonebrandingshop@gmail.com</a></p></section></main>
+<footer>© <span id="year"></span> All-in-One Branding Shop · Design • Print • Brand</footer>
+<script src="/js/api-config.js"></script><script>
+'use strict';
+const API_BASE=window.AIO_API_BASE||'';
+const form=document.getElementById('trackForm'),message=document.getElementById('message'),result=document.getElementById('result'),button=document.getElementById('submitButton');
+document.getElementById('year').textContent=new Date().getFullYear();
+const pretty=value=>String(value||'').replaceAll('_',' ').replace(/\b\w/g,c=>c.toUpperCase());
+form.addEventListener('submit',async event=>{event.preventDefault();message.textContent='Looking up your order…';message.className='message';result.hidden=true;button.disabled=true;try{const params=new URLSearchParams({order_id:form.order_id.value.trim(),email:form.email.value.trim()});const response=await fetch(API_BASE+'/api/track-order?'+params.toString(),{cache:'no-store'});const data=await response.json();if(!response.ok)throw new Error(data.error||'We could not look up this order.');const order=data.order;document.getElementById('statusText').textContent=pretty(order.order_status);document.getElementById('resultId').textContent=order.id;document.getElementById('created').textContent=new Date(order.created_at).toLocaleString();document.getElementById('payment').textContent=pretty(order.payment_status);document.getElementById('delivery').textContent=pretty(order.delivery_method);result.hidden=false;message.textContent='Order found.';}catch(error){message.textContent=error.message;message.className='message error';}finally{button.disabled=false;}});
+</script>
+</body></html>
