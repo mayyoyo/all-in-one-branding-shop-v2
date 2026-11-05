@@ -5,6 +5,6 @@
 (() => {
   const localHosts = new Set(['localhost', '127.0.0.1']);
   const isLocal = localHosts.has(window.location.hostname);
-  const testApi = 'https://REPLACE-WITH-NEW-RENDER-SERVICE.onrender.com';
+  const testApi = 'const testApi = 'https://all-in-one-branding-shop-v2.onrender.com';
   window.AIO_API_BASE = isLocal ? '' : testApi;
 })();
